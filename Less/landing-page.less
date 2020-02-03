@@ -5,7 +5,6 @@
   display: flex;
   justify-content: center;
   align-content: center;
-  max-width: 100%;
   // .placeholderimg{
   //   border-radius: 20px;
   // }
@@ -19,15 +18,87 @@
     user-select: none;
     background-color: #4c4c4c;
     border: solid 10px #2c2c2c;
+    border-radius: 1rem;
     .slide-img{
       position: absolute;
       width: 100%;
       height: 100%;
+      z-index:-1;
       img{
         width:inherit;
         height: inherit;
       }
     }
+    .nav_slide{
+      width: 100%;
+      height: 11px;
+      bottom: 12%;
+      position: absolute;
+      text-align: center;
+      z-index: 99;
+      cursor: default;
+      .dots{
+        top: -5px;
+        width: 1.8rem;
+        height: 1.8rem;
+        margin: 0 4px;
+        position: relative;
+        border-radius: 50%;
+        display: inline-block;
+        background:rgba(0,0,0,.6);
+        &:hover{
+          cursor: pointer;
+	        background-color: rgba(255, 255, 255, 0.9);
+	        transition: .25s
+        }
+      }
+    }
+    #i1,#i2,#i3{
+      display: none;
+    }
+    
+    .pre , .nxt{
+      width: 12%;
+      height: inherit;
+      position: absolute;
+      top: 0;
+      background-color: rgba(88,88,88,.2);
+      z-index: 99;
+      transition: .45s;
+      cursor: pointer;
+      text-align: center;
+      &:hover{
+        transition: .3s;
+        background-color: rgba(88, 88, 89,.8);
+        color: #ffffff; 
+      }
+    }
+    
+    .pre{
+      left:0;
+    }
+    
+    .nxt{
+      right: 0;
+    }
+    
+    #i1:checked ~ #one,
+    #i2:checked ~ #two,
+    #i3:checked ~ #three{
+      z-index:9; animation: scroll 1s ease-in-out;
+    }
+    
+    #i1:checked ~ #nav_slide #dot1,
+    #i2:checked ~ #nav_slide #dot2,
+    #i3:checked ~ #nav_slide #dot3{
+      background-color: rgba(255,255,255,.9);
+    }
+    
+    
+    @keyframes scroll{
+      0%{	opacity:.4;}
+      100%{opacity:1;}
+    }		
   }
 }
 
@@ -35,6 +106,7 @@
 .carouseldesc{
   width: 50rem;
   margin-left: 3rem;
+  padding-top: 6rem;
   .carouseltitle{
     font-size: 2.3rem;
   }
@@ -56,54 +128,3 @@
   
 }
 
-#i1,#i2,#i3{
-  display: none;
-}
-
-.pre , .nxt{
-  width: 12%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  background: rgba(88,88,88,.4);
-  z-index: 99;
-  cursor: pointer;
-}
-
-.pre{
-  left:0;
-}
-
-.nxt{
-  right: 0;
-}
-
-.nav{
-  width: 100%;
-  height: 11px;
-  bottom: 12%;
-  position: absolute;
-  text-align: center;
-  z-index: 99;
-}
-
-.dots{
-  top: -5px;
-  width: 1.8rem;
-  height: 1.8rem;
-  margin: 0 4px;
-  position: relative;
-  border-radius: 50%;
-  display: inline-block;
-  background:rgba(0,0,0,.6);
-}
-
-.slide-img{
-  z-index:-1
-}
-
-#i1:checked ~ #one,
-#i2:checked ~ #two,
-#i3:checked ~ #three{
-  z-index:9;
-}
