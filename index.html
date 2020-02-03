@@ -4,10 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SpaceWalkers</title>
+  <title>SAFE - Quick and Safe Travel to Health Facilities </title>
 
   <link href="https://fonts.googleapis.com/css?family=Russo+One|Ubuntu" rel="stylesheet">
-  <link href="css/index.css" rel="stylesheet">
+  <link href="less/index.css" rel="stylesheet">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -18,70 +18,74 @@
 
  <!-- navigation code here -->
  <section id="navgroup">
-  <nav>
-    <div class="maintitle">
-      <h2>SpaceWalkers</h2>
-    </div>
-    <div class="links">
-  <a class="home1" href="index.html">Home</a>
-  <a href="#">About Us</a>
-  <a href="#">Blog</a>
-  <a href="contact.html">Contact</a>
-  <a href="#">Sign In</a>
-</div>
-  </nav>
-  </section>
-  
-  <div class="container home">
-
-    <header class="intro">
-       <!-- image code here -->
-       <div class="img-earth">
-        <img src="img/main-header.png" alt="Let's go on a space adventure!">
+    <nav>
+      <div class="safeLogo">
+        <h2>SAFE</h2>
       </div>
-      <h2>Lift Off</h2>
-    
-      <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would fall apart. Seeing this has to change a man.</p>
-    </header>
+      <div class="links">
+    <a class="home1" href="index.html">Home</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+    <a class="signup" href="#">Sign Up/Login</a>
+  </div>
+    </nav>
+    </section>
+  
+  <section id="container">
 
-    <section class="space-images">
+    <header class="landing">
+       <!-- <div class="img-carousel">
+        <img class="placeholderimg" src="img/carousel.jpg" alt="Uganda tuk tuk">
+      </div> -->
+      <div class="carouselreal">
+          <input type="radio" name="images" id="i1" checked />
+          <input type="radio" name="images" id="i2" />
+          <input type="radio" name="images" id="i3" />
+        <div class="slide-img" id="one">
+            <img src="img/carousel1.jpg">
+
+            <label for="i3" class="pre"></label>
+            <label for="i2" class="nxt"></label>
+        </div>
+        <div class="slide-img" id="two">
+            <img src="img/carousel2.jpg">
+            <label for="i1" class="pre"></label>
+            <label for="i3" class="nxt"></label>
+        </div>
+        <div class="slide-img" id="three">
+            <img src="img/carousel3.jpg">
+            <label for="i2" class="pre"></label>
+            <label for="i1" class="nxt"></label>
+        </div>
+        <div class="nav">
+            <label class="dots" id="dot1" for="i1"></label>
+            <label class="dots" id="dot2" for="i2"></label>
+            <label class="dots" id="dot3" for="i3"></label>
+        </div>
+    </div>
+      <div class="carouseldesc">
+      <h2 class="carouseltitle">Our Drivers</h2>
+        
+      <p>These guys are pretty good they can go at least 100 miles per hour. They go pretty fast Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, tempore fugiat? Aspernatur, magnam? Enim, assumenda. Dolorem, necessitatibus officiis magni voluptate assumenda sed aliquid repellat possimus accusantium incidunt. Officiis, rerum quo.</p>
+    </div>
+    </header>
+    <section id="welcome">
+        <h2>Welcome!</h2>
+        
+
+    </section>
+    <!-- <section class="space-images">
         <img src="img/blast.png" class="blast" alt="Rocket blasting off">
         <img src="img/sky.png" class="sky" alt="Space sky image">
         <img src="img/launch.png" class="launch" alt="Launching rocket">
-    </section>
-   
-    <section class="visit-planets">
-     
-      <h3>Can We Visit Planets?</h3>
+    </section> -->
     
-      <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet.</p>
-    
-      <p>Which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it.</p>
-    </section>
-    
-    <section class="walk">
-      <div class="walk-text">
-        <h3>Let's Go For A Walk</h3>
 
-        <p>The Earth was small, light blue, and so touchingly alone, our home that must be defended like a holy relic. The Earth was absolutely round.</p>
-      
-        <p>Suddenly struck me that that tiny pea, pretty and blue, was the Earth. I put up my thumb and shut one eye, and my thumb blotted out the planet Earth.</p>
-      
-        <div class="btn">
-          <button class="signbtn" onclick="window.location.href = 'contact.html';" >Sign Up</button>
-        </div>
-      </div>
-      
-      <div class="walk-img">
-          <img src="img/space-walk.png" alt="Space walking astronaut">
-      </div>
+</section>
 
-    </section>
+  <footer class="footer">
+    <p>Copyright SAFE 2020</p>
+  </footer>
 
-    <footer>
-      <p>Copyright SpaceWalkers 2018</p>
-    </footer>
-
-  </div>
 </body>
 </html>
