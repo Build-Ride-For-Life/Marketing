@@ -8,15 +8,27 @@
   @media @phone{
     max-width: 100%;
   }
-
+.header{
+  .headerimg{
+    display: flex;
+    justify-content: center;
+    .margincenter();
+  max-height: 30rem;
+  }
+  @media @phone{
+    display: none;
+  }
+  @media @tablet{
+    display: none;
+  }
+}
 .landing{
   margin-top: 10rem;
   display: flex;
   justify-content: center;
   align-content: center;
-  max-width: 100rem;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 150rem;
+  .margincenter();
   @media @phone{
     flex-wrap: wrap;
     margin-top:0;
@@ -133,14 +145,22 @@
     }		
   }
   .carouseldesc{
-    width: 30%;
-    margin-left: 3rem;
-    padding-top: 6rem;
+    margin-top:2rem;
+    color:@pallete6;
+    background-image: linear-gradient( rgb(88, 110, 107), rgb(61, 63, 76));
+    width: 32rem;
+    padding-top: 2rem;
+    border-radius: 20px;
+    padding: 3rem 3rem 3rem 3rem;
     @media @phone{
       width: 90%;
+      background-image:initial;
+      color:@pallete11;
     }
     @media @tablet{
       width:90%;
+      background-image:initial;
+      color:@pallete11;
     }
     .carouseltitle{
       font-size: 2.3rem;

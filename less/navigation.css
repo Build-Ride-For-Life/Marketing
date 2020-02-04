@@ -35,7 +35,7 @@
 }
 #navgroup {
   background-color: #5a3a3f;
-  background-image: linear-gradient(#5a3a3f, #351f23);
+  background-image: linear-gradient(#7c5a50, #5a3a3f);
   z-index: 2;
   transition: 0.32s;
   width: 100%;
@@ -48,7 +48,7 @@
   justify-content: space-evenly;
 }
 #navgroup nav .safeLogo {
-  color: #dddddd;
+  color: #e4d9c5;
   letter-spacing: 1rem;
   font-weight: bold;
   margin-left: 8rem;
