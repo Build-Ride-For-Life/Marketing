@@ -507,6 +507,7 @@ footer {
     width: 90%;
     background-image: initial;
     color: #332131;
+    display: none;
   }
 }
 @media ( max-width: 800px ) {
@@ -544,9 +545,41 @@ footer {
   }
 }
 #container #welcome {
-  margin-top: 5rem;
+  margin-top: 3rem;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#container #welcome .mobiletext {
+  display: none;
+}
+@media ( max-width: 500px ) {
+  #container #welcome .mobiletext {
+    display: initial;
+  }
+}
+#container #welcome .welcometext {
+  width: 100%;
+}
+#container #welcome .signupbtndiv {
+  margin-top: 3rem;
+}
+#container #welcome .signupbtndiv .signbtn {
+  font-weight: bold;
+  display: block;
+  background-color: #6dc472;
+  margin: 0 10px 20px;
+  cursor: pointer;
+  width: 12rem;
+  height: 45px;
+  font-size: 1.8rem;
+  border-radius: 10px;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 #container .carouseltitle {
   font-family: 'Anton', sans-serif;

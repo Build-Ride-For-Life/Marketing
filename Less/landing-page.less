@@ -156,6 +156,7 @@
       width: 90%;
       background-image:initial;
       color:@pallete11;
+      display: none;
     }
     @media @tablet{
       width:90%;
@@ -195,13 +196,28 @@
   }
 }
 
-
-
-
 #welcome{
-  margin-top: 5rem;
-  display: flex;
-  justify-content: center;
+  margin-top: 3rem;
+  .center();
+  flex-wrap: wrap;
+ text-align: center;
+ .mobiletext{
+   display:none;
+   
+   @media @phone{
+     display: initial;
+   }
+ }
+  .margincenter();
+  .welcometext{
+    width: 100%;
+  }
+  .signupbtndiv{
+    margin-top: 3rem;
+  .signbtn{
+    .custom-btn();
+  }
+}
 }
 
 .carouseltitle{
