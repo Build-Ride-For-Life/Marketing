@@ -33,6 +33,18 @@
   font-display: swap;
   src: local('Anton Regular'), local('Anton-Regular'), url(https://fonts.gstatic.com/s/anton/v11/1Ptgg87LROyAm3Kz-Co.ttf) format('truetype');
 }
+.text-box1 {
+  color: #b6c2aa;
+  background-image: linear-gradient(#586e6b, #3d3f4c);
+  border-radius: 20px;
+  padding: 2rem 2rem 2rem 2rem;
+}
+.text-box2 {
+  color: #ccc3b2;
+  background-image: linear-gradient(#7c5a50, #332131);
+  border-radius: 20px;
+  padding: 2rem 2rem 2rem 2rem;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -216,10 +228,7 @@ img {
   justify-content: space-evenly;
 }
 #navgroup nav .safeLogo {
-  margin-top: 1rem;
-  color: #e4d9c5;
-  font-weight: bold;
-  white-space: nowrap;
+  max-width: 18rem;
 }
 #navgroup .links {
   display: flex;
@@ -236,7 +245,7 @@ img {
   background-image: linear-gradient(#c5f8cc, #c5f8cc);
   background-color: #c5f8cc;
 }
-#navgroup a {
+#navgroup a:not(.safeLogo) {
   border-radius: 20px;
   border: 1px solid rgba(59, 59, 59, 0.8);
   background-image: linear-gradient(#7c5a50, #5a3a3f);
@@ -246,12 +255,12 @@ img {
   white-space: nowrap;
   text-decoration: none;
   width: 15rem;
-  margin-left: 4rem;
+  margin-left: 1rem;
   color: #dddddd;
   font-size: 1.6rem;
   font-family: 'Montserrat', sans-serif;
 }
-#navgroup a:hover {
+#navgroup a:not(.safeLogo):hover {
   color: black;
   transition: 0.32s;
   background-color: #faffce;
@@ -278,48 +287,48 @@ img {
     flex-wrap: wrap;
   }
   #navgroup nav .links .signup {
-    padding-top: 0.4rem;
-    width: 23rem;
+    padding-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
   }
   #navgroup nav .links a {
-    width: 100%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 5px;
     margin-bottom: 5px;
-    border: none;
     background-image: none;
     font-size: 2rem;
+    border: 1px solid black;
   }
 }
 @media ( max-width: 800px ) {
   #navgroup nav {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
   }
   #navgroup nav .safeLogo {
-    white-space: nowrap;
     display: flex;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+  }
+  #navgroup nav .links {
+    margin-top: 2rem;
     width: 100%;
-  }
-  #navgroup nav .links .signup {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-  #navgroup nav a {
-    width: 15rem;
     margin-left: auto;
     margin-right: auto;
-    border: none;
-    background-image: none;
+    display: flex;
+    justify-content: center;
+  }
+  #navgroup nav .signup {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }
 footer {
   color: #22283B;
   background: #f4f4f4;
-  border: 1px double #e0e0e0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -502,9 +511,10 @@ footer {
   margin-top: 2rem;
   color: #b6c2aa;
   background-image: linear-gradient(#586e6b, #3d3f4c);
+  border-radius: 20px;
+  padding: 2rem 2rem 2rem 2rem;
   width: 32rem;
   padding-top: 2rem;
-  border-radius: 20px;
   padding: 3rem 3rem 3rem 3rem;
 }
 @media ( max-width: 500px ) {
@@ -561,13 +571,20 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
-#container #welcome .mobiletext {
+#container #welcome .mobiletext .hiddentext {
   display: none;
+}
+@media ( max-width: 800px ) {
+  #container #welcome .mobiletext {
+    width: 80%;
+  }
 }
 @media ( max-width: 500px ) {
   #container #welcome .mobiletext {
-    display: initial;
     width: 90%;
+  }
+  #container #welcome .mobiletext .hiddentext {
+    display: initial;
   }
 }
 #container #welcome .welcometext {
@@ -575,23 +592,35 @@ footer {
 }
 #container #welcome .signupbtndiv {
   margin-top: 3rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
 }
 #container #welcome .signupbtndiv .signbtn {
-  font-weight: bold;
   display: block;
+  transition: 0.32s;
   background-color: #6dc472;
   margin: 0 10px 20px;
   cursor: pointer;
   width: 12rem;
   height: 45px;
-  font-size: 1.8rem;
+  font-size: 2rem;
   border-radius: 10px;
   color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  letter-spacing: 1px;
+  font-family: 'Anton', sans-serif;
+  border: 2px solid black;
+}
+#container #welcome .signupbtndiv .signbtn:hover {
+  color: darkolivegreen;
+  background-image: linear-gradient(#c5f8cc, #c5f8cc);
+  background-color: #c5f8cc;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 #aboutcontainer {
-  max-width: 100%;
+  max-width: 90%;
   width: 100%;
   margin: 0 auto;
   min-height: 100%;
@@ -610,6 +639,10 @@ footer {
 #aboutcontainer #members .teamlead {
   margin-top: 5rem;
   width: 100%;
+  color: #ccc3b2;
+  background-image: linear-gradient(#7c5a50, #332131);
+  border-radius: 20px;
+  padding: 2rem 2rem 2rem 2rem;
   display: flex;
   justify-content: center;
   margin-left: auto;
@@ -618,7 +651,8 @@ footer {
 }
 #aboutcontainer #members .teamlead img {
   width: 40%;
-  height: 100%;
+  min-width: 23rem;
+  height: auto;
   border-radius: 100%;
 }
 #aboutcontainer #members .teamlead .teamleadpic {
@@ -626,20 +660,24 @@ footer {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
-  border: 1px solid red;
+  max-width: 100%;
 }
 #aboutcontainer #members .teamlead .descriptionlead {
-  border: 1px solid red;
-  width: 50%;
+  margin-top: 2rem;
+  width: 70%;
   text-align: center;
 }
 #aboutcontainer #members .teamlead .descriptionlead .leadDev {
   font-size: 2.3rem;
   font-family: 'Anton', sans-serif;
 }
+@media ( max-width: 500px ) {
+  #aboutcontainer #members .teamlead {
+    margin-bottom: 0;
+    border-radius: initial;
+  }
+}
 #aboutcontainer #members .memberlist {
-  border: 1px solid red;
   margin-top: 2rem;
   display: flex;
   justify-content: center;
@@ -647,26 +685,76 @@ footer {
   margin-right: auto;
   flex-wrap: wrap;
 }
-#aboutcontainer #members .memberlist .members {
+#aboutcontainer #members .memberlist .membersl,
+#aboutcontainer #members .memberlist .membersr {
   display: flex;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
 }
-#aboutcontainer #members .memberlist .members .uidev {
+#aboutcontainer #members .memberlist .membersl .smalltitle,
+#aboutcontainer #members .memberlist .membersr .smalltitle {
   font-size: 2.3rem;
   font-family: 'Anton', sans-serif;
 }
-#aboutcontainer #members .memberlist .members .membimg {
-  width: 100%;
-  height: auto;
+#aboutcontainer #members .memberlist .membersl .memberpic,
+#aboutcontainer #members .memberlist .membersr .memberpic {
+  max-width: 30rem;
+  min-width: 16rem;
+}
+#aboutcontainer #members .memberlist .membersl .membimg,
+#aboutcontainer #members .memberlist .membersr .membimg {
   border-radius: 50%;
   display: flex;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
 }
-#aboutcontainer #members .memberlist .members .description {
-  border: 1px solid red;
+#aboutcontainer #members .memberlist .membersl .descriptionl,
+#aboutcontainer #members .memberlist .membersr .descriptionl {
+  padding-left: 2rem;
+}
+@media ( max-width: 500px ) {
+  #aboutcontainer #members .memberlist .membersl,
+  #aboutcontainer #members .memberlist .membersr {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+#aboutcontainer #members .memberlist .membersr {
+  color: #b6c2aa;
+  background-image: linear-gradient(#586e6b, #3d3f4c);
+  border-radius: 20px;
+  padding: 2rem 2rem 2rem 2rem;
+  margin-bottom: 2rem;
+}
+#aboutcontainer #members .memberlist .membersr .descriptionr {
+  padding-right: 2rem;
+  text-align: right;
+}
+@media ( max-width: 500px ) {
+  #aboutcontainer #members .memberlist .membersr {
+    margin-bottom: 0;
+    border-radius: initial;
+  }
+}
+#aboutcontainer #members .memberlist .membersl {
+  color: #ccc3b2;
+  background-image: linear-gradient(#7c5a50, #332131);
+  border-radius: 20px;
+  padding: 2rem 2rem 2rem 2rem;
+  margin-bottom: 2rem;
+}
+@media ( max-width: 500px ) {
+  #aboutcontainer #members .memberlist .membersl {
+    margin-bottom: 0;
+    border-radius: initial;
+  }
+}
+@media ( max-width: 500px ) {
+  #aboutcontainer #members .memberlist {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }

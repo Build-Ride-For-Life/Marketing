@@ -17,10 +17,7 @@
       justify-content: space-evenly;
       
       .safeLogo{
-          margin-top: 1rem;
-          color:@pallete7;
-          font-weight: bold;
-          white-space: nowrap;
+          max-width: 18rem;
       }
   }
     .links{
@@ -40,7 +37,7 @@
             }
         }
     }
-  a{
+  a:not(.safeLogo){
     border-radius: 20px;
     border: 1px solid rgba(59, 59, 59, 0.8);
     background-image: linear-gradient(@pallete9,@pallete10);
@@ -50,7 +47,7 @@
     white-space: nowrap;
     text-decoration: none;
     width: 15rem;
-    margin-left: 4rem;
+    margin-left: 1rem;
 	color:rgb(221, 221, 221);
     font-size: 1.6rem;
     font-family: @second-font;
@@ -82,16 +79,18 @@
         flex-wrap: wrap;
 		    
         .signup{
-            padding-top: 0.4rem;
-            width:23rem;
+            padding-top: 1rem;
+            .margincenter();
         }
         a{
-          width: 100%;
+          width:60%;
+          .margincenter();
       margin-top:5px;
       margin-bottom: 5px;
-        border: none;
         background-image:none;
         font-size: 2rem;
+        border: 1px solid black;
+      
         }
     }
     }
@@ -102,28 +101,24 @@
         nav{
             display: flex;
             flex-wrap: wrap;
-            width:100%;
             .safeLogo{
-              white-space:nowrap;
               .center();
               .margincenter();
-              width: 100%;
           }
           .links{
-              
+            margin-top:2rem;
+            width: 100%;
+            .margincenter();
+            .center();
+        }
             .signup{
                 padding-top: 1rem;
                 padding-bottom: 1rem;
                 
             }
+            
+        
         }
-        a{
-              width: 15rem;
-              .margincenter();
-              border: none;
-              background-image:none;
-              
-        }
-        }
+
     }   
 }

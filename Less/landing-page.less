@@ -149,11 +149,9 @@
   }
   .carouseldesc{
     margin-top:2rem;
-    color:@pallete6;
-    background-image: linear-gradient( rgb(88, 110, 107), rgb(61, 63, 76));
+    .text-box1();
     width: 32rem;
     padding-top: 2rem;
-    border-radius: 20px;
     padding: 3rem 3rem 3rem 3rem;
     @media @phone{
       width: 90%;
@@ -209,11 +207,19 @@
   flex-wrap: wrap;
  text-align: center;
  .mobiletext{
-   display:none;
+   .hiddentext{
+     display: none;
+   }
+   @media @tablet{
+     width: 80%;
+   }
    
    @media @phone{
-     display: initial;
+     
      width: 90%;
+     .hiddentext{
+      display: initial;
+    }
    }
  }
   .margincenter();
@@ -222,6 +228,8 @@
   }
   .signupbtndiv{
     margin-top: 3rem;
+    width: 100%;
+    .margincenter();
   .signbtn{
     .custom-btn();
   }

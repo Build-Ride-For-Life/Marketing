@@ -2,7 +2,7 @@
 @import "mixins";
 
 #aboutcontainer {
-    max-width: 100%;
+    max-width: 90%;
     width:100%;
     margin: 0 auto;
     min-height: 100%;
@@ -20,56 +20,97 @@
      .teamlead{
          margin-top: 5rem;
          width: 100%;
+         .text-box2();
          .center();
          .margincenter();
          flex-wrap: wrap;
          img{
             width: 40%;
-            height: 100%;
+            min-width: 23rem;
+            height: auto;
              border-radius: 100%;
          }       
          .teamleadpic{
              .center();
             .margincenter();
-            width:100%;
-            border: 1px solid red;
+            max-width:100%;
+            
+
+
          }
          .descriptionlead{
-            border: 1px solid red;
-             width: 50%;
+             margin-top:2rem;
+           
+             width: 70%;
              text-align: center;
+             .leadDev{
+                font-size: 2.3rem;
+                font-family: @third-font;
+             }
              
          }
-         .leadDev{
-            font-size: 2.3rem;
-            font-family: @third-font;
-         }
+         @media @phone{
+            
+            margin-bottom:0;
+            border-radius: initial;
+        }
+         
      }  
 .memberlist{
-    border: 1px solid red;
+
     margin-top: 2rem;
     .center();
     .margincenter();
     flex-wrap: wrap;
-    .members{
+    .membersl,.membersr{
         .center();
         .margincenter();
         width: 100%;
-        .uidev{
+        .smalltitle{
         font-size: 2.3rem;
         font-family: @third-font;
         }
+        .memberpic{
+            max-width:30rem;
+            min-width: 16rem;
+        }
         .membimg{
-            width: 100%;
-            height: auto;
             border-radius: 50%;
             .center();
             .margincenter();
     
             }
-        .description{
-            border: 1px solid red;
+       .descriptionl{
+           padding-left: 2rem;
+       }
+       @media @phone{
+           margin-top:0;
+           margin-bottom:0;
+       }
+    }
+    .membersr{
+        .text-box1();
+        margin-bottom: 2rem;
+        .descriptionr{
+            padding-right:2rem;
+            text-align:right;
         }
+        @media @phone{
+            margin-bottom:0;
+            border-radius: initial;
+        }
+    }
+    .membersl{
+        .text-box2();
+        margin-bottom: 2rem;
+        @media @phone{
+            margin-bottom:0;
+            border-radius: initial;
+        }
+    }
+    @media @phone{
+        margin-top:0;
+        margin-bottom:0;
     }
     
     

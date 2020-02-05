@@ -33,6 +33,18 @@
   font-display: swap;
   src: local('Anton Regular'), local('Anton-Regular'), url(https://fonts.gstatic.com/s/anton/v11/1Ptgg87LROyAm3Kz-Co.ttf) format('truetype');
 }
+.text-box1 {
+  color: #b6c2aa;
+  background-image: linear-gradient(#586e6b, #3d3f4c);
+  border-radius: 20px;
+  padding: 2rem 2rem 2rem 2rem;
+}
+.text-box2 {
+  color: #ccc3b2;
+  background-image: linear-gradient(#7c5a50, #332131);
+  border-radius: 20px;
+  padding: 2rem 2rem 2rem 2rem;
+}
 #navgroup {
   background-color: #5a3a3f;
   background-image: linear-gradient(#7c5a50, #5a3a3f);
@@ -47,10 +59,7 @@
   justify-content: space-evenly;
 }
 #navgroup nav .safeLogo {
-  margin-top: 1rem;
-  color: #e4d9c5;
-  font-weight: bold;
-  white-space: nowrap;
+  max-width: 18rem;
 }
 #navgroup .links {
   display: flex;
@@ -67,7 +76,7 @@
   background-image: linear-gradient(#c5f8cc, #c5f8cc);
   background-color: #c5f8cc;
 }
-#navgroup a {
+#navgroup a:not(.safeLogo) {
   border-radius: 20px;
   border: 1px solid rgba(59, 59, 59, 0.8);
   background-image: linear-gradient(#7c5a50, #5a3a3f);
@@ -77,12 +86,12 @@
   white-space: nowrap;
   text-decoration: none;
   width: 15rem;
-  margin-left: 4rem;
+  margin-left: 1rem;
   color: #dddddd;
   font-size: 1.6rem;
   font-family: 'Montserrat', sans-serif;
 }
-#navgroup a:hover {
+#navgroup a:not(.safeLogo):hover {
   color: black;
   transition: 0.32s;
   background-color: #faffce;
@@ -109,41 +118,42 @@
     flex-wrap: wrap;
   }
   #navgroup nav .links .signup {
-    padding-top: 0.4rem;
-    width: 23rem;
+    padding-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
   }
   #navgroup nav .links a {
-    width: 100%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 5px;
     margin-bottom: 5px;
-    border: none;
     background-image: none;
     font-size: 2rem;
+    border: 1px solid black;
   }
 }
 @media ( max-width: 800px ) {
   #navgroup nav {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
   }
   #navgroup nav .safeLogo {
-    white-space: nowrap;
     display: flex;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+  }
+  #navgroup nav .links {
+    margin-top: 2rem;
     width: 100%;
-  }
-  #navgroup nav .links .signup {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-  #navgroup nav a {
-    width: 15rem;
     margin-left: auto;
     margin-right: auto;
-    border: none;
-    background-image: none;
+    display: flex;
+    justify-content: center;
+  }
+  #navgroup nav .signup {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }

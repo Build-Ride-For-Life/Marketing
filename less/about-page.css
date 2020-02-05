@@ -33,8 +33,20 @@
   font-display: swap;
   src: local('Anton Regular'), local('Anton-Regular'), url(https://fonts.gstatic.com/s/anton/v11/1Ptgg87LROyAm3Kz-Co.ttf) format('truetype');
 }
+.text-box1 {
+  color: #b6c2aa;
+  background-image: linear-gradient(#586e6b, #3d3f4c);
+  border-radius: 20px;
+  padding: 2rem 2rem 2rem 2rem;
+}
+.text-box2 {
+  color: #ccc3b2;
+  background-image: linear-gradient(#7c5a50, #332131);
+  border-radius: 20px;
+  padding: 2rem 2rem 2rem 2rem;
+}
 #aboutcontainer {
-  max-width: 100%;
+  max-width: 90%;
   width: 100%;
   margin: 0 auto;
   min-height: 100%;
@@ -53,6 +65,10 @@
 #aboutcontainer #members .teamlead {
   margin-top: 5rem;
   width: 100%;
+  color: #ccc3b2;
+  background-image: linear-gradient(#7c5a50, #332131);
+  border-radius: 20px;
+  padding: 2rem 2rem 2rem 2rem;
   display: flex;
   justify-content: center;
   margin-left: auto;
@@ -61,7 +77,8 @@
 }
 #aboutcontainer #members .teamlead img {
   width: 40%;
-  height: 100%;
+  min-width: 23rem;
+  height: auto;
   border-radius: 100%;
 }
 #aboutcontainer #members .teamlead .teamleadpic {
@@ -69,20 +86,24 @@
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
-  border: 1px solid red;
+  max-width: 100%;
 }
 #aboutcontainer #members .teamlead .descriptionlead {
-  border: 1px solid red;
-  width: 50%;
+  margin-top: 2rem;
+  width: 70%;
   text-align: center;
 }
-#aboutcontainer #members .teamlead .leadDev {
+#aboutcontainer #members .teamlead .descriptionlead .leadDev {
   font-size: 2.3rem;
   font-family: 'Anton', sans-serif;
 }
+@media ( max-width: 500px ) {
+  #aboutcontainer #members .teamlead {
+    margin-bottom: 0;
+    border-radius: initial;
+  }
+}
 #aboutcontainer #members .memberlist {
-  border: 1px solid red;
   margin-top: 2rem;
   display: flex;
   justify-content: center;
@@ -90,26 +111,76 @@
   margin-right: auto;
   flex-wrap: wrap;
 }
-#aboutcontainer #members .memberlist .members {
+#aboutcontainer #members .memberlist .membersl,
+#aboutcontainer #members .memberlist .membersr {
   display: flex;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
 }
-#aboutcontainer #members .memberlist .members .uidev {
+#aboutcontainer #members .memberlist .membersl .smalltitle,
+#aboutcontainer #members .memberlist .membersr .smalltitle {
   font-size: 2.3rem;
   font-family: 'Anton', sans-serif;
 }
-#aboutcontainer #members .memberlist .members .membimg {
-  width: 100%;
-  height: auto;
+#aboutcontainer #members .memberlist .membersl .memberpic,
+#aboutcontainer #members .memberlist .membersr .memberpic {
+  max-width: 30rem;
+  min-width: 16rem;
+}
+#aboutcontainer #members .memberlist .membersl .membimg,
+#aboutcontainer #members .memberlist .membersr .membimg {
   border-radius: 50%;
   display: flex;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
 }
-#aboutcontainer #members .memberlist .members .description {
-  border: 1px solid red;
+#aboutcontainer #members .memberlist .membersl .descriptionl,
+#aboutcontainer #members .memberlist .membersr .descriptionl {
+  padding-left: 2rem;
+}
+@media ( max-width: 500px ) {
+  #aboutcontainer #members .memberlist .membersl,
+  #aboutcontainer #members .memberlist .membersr {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+#aboutcontainer #members .memberlist .membersr {
+  color: #b6c2aa;
+  background-image: linear-gradient(#586e6b, #3d3f4c);
+  border-radius: 20px;
+  padding: 2rem 2rem 2rem 2rem;
+  margin-bottom: 2rem;
+}
+#aboutcontainer #members .memberlist .membersr .descriptionr {
+  padding-right: 2rem;
+  text-align: right;
+}
+@media ( max-width: 500px ) {
+  #aboutcontainer #members .memberlist .membersr {
+    margin-bottom: 0;
+    border-radius: initial;
+  }
+}
+#aboutcontainer #members .memberlist .membersl {
+  color: #ccc3b2;
+  background-image: linear-gradient(#7c5a50, #332131);
+  border-radius: 20px;
+  padding: 2rem 2rem 2rem 2rem;
+  margin-bottom: 2rem;
+}
+@media ( max-width: 500px ) {
+  #aboutcontainer #members .memberlist .membersl {
+    margin-bottom: 0;
+    border-radius: initial;
+  }
+}
+@media ( max-width: 500px ) {
+  #aboutcontainer #members .memberlist {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
