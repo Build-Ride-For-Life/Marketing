@@ -1,0 +1,159 @@
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v14/1Ptug8zYS_SKggPNyC0ISg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'ZCOOL QingKe HuangYou';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('ZCOOL QingKe HuangYou Regular'), local('ZCOOLQingKeHuangYou-Regular'), url(https://fonts.gstatic.com/s/zcoolqingkehuangyou/v5/2Eb5L_R5IXJEWhD3AOhSvFC554MOOahI4mR4jPe4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Sigmar One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Sigmar One Regular'), local('SigmarOne-Regular'), url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6Tpow.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Anton Regular'), local('Anton-Regular'), url(https://fonts.gstatic.com/s/anton/v11/1Ptgg87LROyAm3Kz-Co.ttf) format('truetype');
+}
+.text-box1 {
+  color: #b6c2aa;
+  background-image: linear-gradient(#586e6b, #3d3f4c);
+  border-radius: 20px;
+  padding: 2rem 2rem 2rem 2rem;
+}
+.text-box2 {
+  color: #ccc3b2;
+  background-image: linear-gradient(#7c5a50, #332131);
+  border-radius: 20px;
+  padding: 2rem 2rem 2rem 2rem;
+}
+#navgroup {
+  background-color: #5a3a3f;
+  background-image: linear-gradient(#7c5a50, #5a3a3f);
+  z-index: 2;
+  transition: 0.32s;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+#navgroup nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+#navgroup nav .safeLogo {
+  max-width: 18rem;
+}
+#navgroup .links {
+  display: flex;
+}
+#navgroup .links .signup {
+  color: #3b3b3b;
+  font-weight: bold;
+  border: 2px solid #095721;
+  border-radius: 20px;
+  background-color: #8be697;
+  background-image: linear-gradient(#c5f8cc, #8be697);
+}
+#navgroup .links .signup:hover {
+  background-image: linear-gradient(#c5f8cc, #c5f8cc);
+  background-color: #c5f8cc;
+}
+#navgroup a:not(.safeLogo) {
+  border-radius: 20px;
+  border: 1px solid rgba(59, 59, 59, 0.8);
+  background-image: linear-gradient(#7c5a50, #5a3a3f);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  width: 15rem;
+  margin-left: 1rem;
+  color: #dddddd;
+  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+}
+#navgroup a:not(.safeLogo):hover {
+  color: black;
+  transition: 0.32s;
+  background-color: #faffce;
+  background-image: linear-gradient(#917260, #7c5a50);
+  border-radius: 20px;
+}
+@media ( max-width: 500px ) {
+  #navgroup nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  #navgroup nav .safeLogo {
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  #navgroup nav .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  #navgroup nav .links .signup {
+    padding-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #navgroup nav .links a {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-image: none;
+    font-size: 2rem;
+    border: 1px solid black;
+  }
+}
+@media ( max-width: 800px ) {
+  #navgroup nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #navgroup nav .safeLogo {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #navgroup nav .links {
+    margin-top: 2rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+  }
+  #navgroup nav .signup {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
