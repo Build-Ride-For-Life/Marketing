@@ -1,0 +1,84 @@
+@import "variables";
+@import "mixins";
+
+#aboutcontainer {
+    max-width: 100%;
+    width:100%;
+    margin: 0 auto;
+    min-height: 100%;
+    @media @phone{
+      max-width: 100%;
+    }
+   
+ #members{
+    .toptitle{
+        width: 100%;
+        text-align: center;
+        margin-top: 5rem;
+        font-family: @third-font;
+    }
+     .teamlead{
+         margin-top: 5rem;
+         width: 100%;
+         .center();
+         .margincenter();
+         flex-wrap: wrap;
+         img{
+            width: 40%;
+            height: 100%;
+             border-radius: 100%;
+         }       
+         .teamleadpic{
+             .center();
+            .margincenter();
+            width:100%;
+            border: 1px solid red;
+         }
+         .descriptionlead{
+            border: 1px solid red;
+             width: 50%;
+             text-align: center;
+             
+         }
+         .leadDev{
+            font-size: 2.3rem;
+            font-family: @third-font;
+         }
+     }  
+.memberlist{
+    border: 1px solid red;
+    margin-top: 2rem;
+    .center();
+    .margincenter();
+    flex-wrap: wrap;
+    .members{
+        .center();
+        .margincenter();
+        width: 100%;
+        .uidev{
+        font-size: 2.3rem;
+        font-family: @third-font;
+        }
+        .membimg{
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            .center();
+            .margincenter();
+    
+            }
+        .description{
+            border: 1px solid red;
+        }
+    }
+    
+    
+    }
+     
+
+}
+ 
+
+
+
+}

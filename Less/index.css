@@ -171,7 +171,9 @@ html,
 body {
   font-family: 'Montserrat', sans-serif;
   height: 100%;
-  background-color: #f7ecd8;
+  background-color: rgba(247, 236, 216, 0.81);
+  background-image: url(../img/header.jpg);
+  background-blend-mode: color-burn;
 }
 h1,
 h2,
@@ -184,7 +186,7 @@ h1 {
   font-size: 4rem;
 }
 h2 {
-  font-size: 3.2rem;
+  font-size: 2.3rem;
   padding-bottom: 10px;
 }
 h4 {
@@ -208,22 +210,19 @@ img {
   width: 100%;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid #C0C0C0;
 }
 #navgroup nav {
   display: flex;
   justify-content: space-evenly;
 }
 #navgroup nav .safeLogo {
+  margin-top: 1rem;
   color: #e4d9c5;
-  letter-spacing: 1rem;
   font-weight: bold;
-  margin-left: 8rem;
-  margin-left: 1rem;
+  white-space: nowrap;
 }
 #navgroup .links {
   display: flex;
-  justify-content: space-between;
 }
 #navgroup .links .signup {
   color: #3b3b3b;
@@ -239,12 +238,15 @@ img {
 }
 #navgroup a {
   border-radius: 20px;
+  border: 1px solid rgba(59, 59, 59, 0.8);
+  background-image: linear-gradient(#7c5a50, #5a3a3f);
   padding-top: 1rem;
-  display: flex;
-  justify-content: center;
-  width: 15rem;
+  padding-bottom: 1rem;
+  text-align: center;
   white-space: nowrap;
   text-decoration: none;
+  width: 15rem;
+  margin-left: 4rem;
   color: #dddddd;
   font-size: 1.6rem;
   font-family: 'Montserrat', sans-serif;
@@ -253,6 +255,7 @@ img {
   color: black;
   transition: 0.32s;
   background-color: #faffce;
+  background-image: linear-gradient(#917260, #7c5a50);
   border-radius: 20px;
 }
 @media ( max-width: 500px ) {
@@ -271,17 +274,20 @@ img {
   }
   #navgroup nav .links {
     display: flex;
-    align-content: center;
     justify-content: center;
-    margin-right: auto;
-    margin-left: auto;
+    flex-wrap: wrap;
   }
   #navgroup nav .links .signup {
     padding-top: 0.4rem;
-    width: 15rem;
+    width: 23rem;
   }
-  #navgroup nav a {
-    width: 10rem;
+  #navgroup nav .links a {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    background-image: none;
+    font-size: 2rem;
   }
 }
 @media ( max-width: 800px ) {
@@ -298,19 +304,16 @@ img {
     margin-right: auto;
     width: 100%;
   }
-  #navgroup nav .links {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    margin-right: auto;
-    margin-left: auto;
-  }
   #navgroup nav .links .signup {
-    padding-top: 0.4rem;
-    width: 15rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   #navgroup nav a {
-    width: 10rem;
+    width: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    background-image: none;
   }
 }
 footer {
@@ -360,7 +363,7 @@ footer {
   }
 }
 #container .landing {
-  margin-top: 10rem;
+  margin-top: 0;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -391,10 +394,12 @@ footer {
   background-color: #4c4c4c;
   border: solid 10px #2c2c2c;
   border-radius: 1rem;
+  overflow: hidden;
 }
 @media ( max-width: 500px ) {
   #container .landing .carouselreal {
     margin-top: 0;
+    border-radius: 0;
   }
 }
 @media ( max-width: 800px ) {
@@ -519,6 +524,7 @@ footer {
 }
 #container .landing .carouseldesc .carouseltitle {
   font-size: 2.3rem;
+  font-family: 'Anton', sans-serif;
 }
 @media ( max-width: 800px ) {
   #container .landing .landing {
@@ -526,6 +532,8 @@ footer {
   }
   #container .landing .carouselreal {
     width: 100%;
+    height: 0;
+    padding-bottom: 55%;
   }
 }
 @media ( max-width: 500px ) {
@@ -559,6 +567,7 @@ footer {
 @media ( max-width: 500px ) {
   #container #welcome .mobiletext {
     display: initial;
+    width: 90%;
   }
 }
 #container #welcome .welcometext {
@@ -581,6 +590,83 @@ footer {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-#container .carouseltitle {
+#aboutcontainer {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100%;
+}
+@media ( max-width: 500px ) {
+  #aboutcontainer {
+    max-width: 100%;
+  }
+}
+#aboutcontainer #members .toptitle {
+  width: 100%;
+  text-align: center;
+  margin-top: 5rem;
   font-family: 'Anton', sans-serif;
+}
+#aboutcontainer #members .teamlead {
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+}
+#aboutcontainer #members .teamlead img {
+  width: 40%;
+  height: 100%;
+  border-radius: 100%;
+}
+#aboutcontainer #members .teamlead .teamleadpic {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  border: 1px solid red;
+}
+#aboutcontainer #members .teamlead .descriptionlead {
+  border: 1px solid red;
+  width: 50%;
+  text-align: center;
+}
+#aboutcontainer #members .teamlead .descriptionlead .leadDev {
+  font-size: 2.3rem;
+  font-family: 'Anton', sans-serif;
+}
+#aboutcontainer #members .memberlist {
+  border: 1px solid red;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+}
+#aboutcontainer #members .memberlist .members {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+#aboutcontainer #members .memberlist .members .uidev {
+  font-size: 2.3rem;
+  font-family: 'Anton', sans-serif;
+}
+#aboutcontainer #members .memberlist .members .membimg {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#aboutcontainer #members .memberlist .members .description {
+  border: 1px solid red;
 }

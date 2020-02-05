@@ -12,22 +12,20 @@
     width: 100%;
     padding-top:1rem;
     padding-bottom: 1rem;
-    border-bottom: 2px solid @navigation-border;
   nav{
       display: flex;
       justify-content: space-evenly;
       
       .safeLogo{
+          margin-top: 1rem;
           color:@pallete7;
-          letter-spacing: 1rem;
           font-weight: bold;
-          margin-left: 8rem;
-          margin-left: 1rem;
+          white-space: nowrap;
       }
   }
     .links{
         display: flex;
-        justify-content: space-between;
+        
 
         .signup{
             color:rgb(59, 59, 59);
@@ -44,24 +42,28 @@
     }
   a{
     border-radius: 20px;
+    border: 1px solid rgba(59, 59, 59, 0.8);
+    background-image: linear-gradient(@pallete9,@pallete10);
       padding-top: 1rem;
-    display: flex;   
-    justify-content: center;
-    width: 15rem;
+      padding-bottom: 1rem;
+      text-align: center;
     white-space: nowrap;
-	  text-decoration: none;
+    text-decoration: none;
+    width: 15rem;
+    margin-left: 4rem;
 	color:rgb(221, 221, 221);
     font-size: 1.6rem;
     font-family: @second-font;
 	&:hover{
         color:black;
 		transition: 0.32s;
-		background-color: rgb(250, 255, 206);
+    background-color: rgb(250, 255, 206);
+    background-image: linear-gradient(@pallete8,@pallete9);
 		border-radius: 20px;
-	}
-	
   }
   
+	
+  }
   
   @media @phone{
 	nav{
@@ -70,28 +72,32 @@
         width:100%;
         .safeLogo{
           white-space:nowrap;
-          display: flex;
-          justify-content: center;
-          margin-left: auto;
-          margin-right: auto;
+          .center();
+          .margincenter();
           width: 100%;
       }
       .links{
-        display: flex;   
-        align-content: center;
-        justify-content: center;
-        margin-right:auto;
-        margin-left: auto;
+        
+        .center(); 
+        flex-wrap: wrap;
+		    
         .signup{
             padding-top: 0.4rem;
-            width:15rem;
+            width:23rem;
         }
-    }
-    a{
-        width: 10rem;
+        a{
+          width: 100%;
+      margin-top:5px;
+      margin-bottom: 5px;
+        border: none;
+        background-image:none;
+        font-size: 2rem;
+        }
     }
     }
   }
+
+
     @media @tablet{
         nav{
             display: flex;
@@ -99,25 +105,24 @@
             width:100%;
             .safeLogo{
               white-space:nowrap;
-              display: flex;
-              justify-content: center;
-              margin-left: auto;
-              margin-right: auto;
+              .center();
+              .margincenter();
               width: 100%;
           }
           .links{
-            display: flex;   
-            align-content: center;
-            justify-content: center;
-            margin-right:auto;
-            margin-left: auto;
+              
             .signup{
-                padding-top: 0.4rem;
-                width:15rem;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                
             }
         }
         a{
-            width: 10rem;
+              width: 15rem;
+              .margincenter();
+              border: none;
+              background-image:none;
+              
         }
         }
     }   

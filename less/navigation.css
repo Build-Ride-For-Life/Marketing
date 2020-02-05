@@ -41,22 +41,19 @@
   width: 100%;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid #C0C0C0;
 }
 #navgroup nav {
   display: flex;
   justify-content: space-evenly;
 }
 #navgroup nav .safeLogo {
+  margin-top: 1rem;
   color: #e4d9c5;
-  letter-spacing: 1rem;
   font-weight: bold;
-  margin-left: 8rem;
-  margin-left: 1rem;
+  white-space: nowrap;
 }
 #navgroup .links {
   display: flex;
-  justify-content: space-between;
 }
 #navgroup .links .signup {
   color: #3b3b3b;
@@ -72,12 +69,15 @@
 }
 #navgroup a {
   border-radius: 20px;
+  border: 1px solid rgba(59, 59, 59, 0.8);
+  background-image: linear-gradient(#7c5a50, #5a3a3f);
   padding-top: 1rem;
-  display: flex;
-  justify-content: center;
-  width: 15rem;
+  padding-bottom: 1rem;
+  text-align: center;
   white-space: nowrap;
   text-decoration: none;
+  width: 15rem;
+  margin-left: 4rem;
   color: #dddddd;
   font-size: 1.6rem;
   font-family: 'Montserrat', sans-serif;
@@ -86,6 +86,7 @@
   color: black;
   transition: 0.32s;
   background-color: #faffce;
+  background-image: linear-gradient(#917260, #7c5a50);
   border-radius: 20px;
 }
 @media ( max-width: 500px ) {
@@ -104,17 +105,20 @@
   }
   #navgroup nav .links {
     display: flex;
-    align-content: center;
     justify-content: center;
-    margin-right: auto;
-    margin-left: auto;
+    flex-wrap: wrap;
   }
   #navgroup nav .links .signup {
     padding-top: 0.4rem;
-    width: 15rem;
+    width: 23rem;
   }
-  #navgroup nav a {
-    width: 10rem;
+  #navgroup nav .links a {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    background-image: none;
+    font-size: 2rem;
   }
 }
 @media ( max-width: 800px ) {
@@ -131,18 +135,15 @@
     margin-right: auto;
     width: 100%;
   }
-  #navgroup nav .links {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    margin-right: auto;
-    margin-left: auto;
-  }
   #navgroup nav .links .signup {
-    padding-top: 0.4rem;
-    width: 15rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   #navgroup nav a {
-    width: 10rem;
+    width: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    background-image: none;
   }
 }

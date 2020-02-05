@@ -8,7 +8,9 @@ html,
 body {
   font-family: 'Montserrat', sans-serif;
   height: 100%;
-  background-color: #f7ecd8;
+  background-color: rgba(247, 236, 216, 0.81);
+  background-image: url(../img/header.jpg);
+  background-blend-mode: color-burn;
 }
 h1,
 h2,
@@ -21,7 +23,7 @@ h1 {
   font-size: 4rem;
 }
 h2 {
-  font-size: 3.2rem;
+  font-size: 2.3rem;
   padding-bottom: 10px;
 }
 h4 {
