@@ -157,7 +157,7 @@
 }
 #aboutcontainer #members .memberlist .membersl .contact,
 #aboutcontainer #members .memberlist .membersr .contact {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-family: 'Anton', sans-serif;
 }
 #aboutcontainer #members .memberlist .membersl .gitimg,
@@ -166,6 +166,8 @@
   vertical-align: middle;
   background-color: rgba(0, 0, 0, 0.418);
   border-radius: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 #aboutcontainer #members .memberlist .membersr {
   color: #b6c2aa;

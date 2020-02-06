@@ -513,7 +513,9 @@ footer {
   background-image: linear-gradient(#586e6b, #3d3f4c);
   border-radius: 20px;
   padding: 2rem 2rem 2rem 2rem;
-  width: 32rem;
+  max-width: 32rem;
+  min-width: 23rem;
+  margin-left: 3rem;
   padding-top: 2rem;
   padding: 3rem 3rem 3rem 3rem;
 }
@@ -733,7 +735,7 @@ footer {
 }
 #aboutcontainer #members .memberlist .membersl .contact,
 #aboutcontainer #members .memberlist .membersr .contact {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-family: 'Anton', sans-serif;
 }
 #aboutcontainer #members .memberlist .membersl .gitimg,
@@ -742,6 +744,8 @@ footer {
   vertical-align: middle;
   background-color: rgba(0, 0, 0, 0.418);
   border-radius: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 #aboutcontainer #members .memberlist .membersr {
   color: #b6c2aa;
