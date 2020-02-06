@@ -24,7 +24,7 @@
          .center();
          .margincenter();
          flex-wrap: wrap;
-         img{
+         img:not(.gitimg){
             width: 40%;
             min-width: 23rem;
             height: auto;
@@ -47,6 +47,17 @@
                 font-size: 2.3rem;
                 font-family: @third-font;
              }
+             .contact{
+                font-size: 1.5rem;
+                font-family: @third-font;
+                .gitimg{
+                    width: 6rem;
+                    vertical-align: middle;
+                    background-color:(rgba(0, 0, 0, 0.418));
+                    border-radius:1rem;
+                 }
+             }
+             
              
          }
          @media @phone{
@@ -87,6 +98,16 @@
            margin-top:0;
            margin-bottom:0;
        }
+       .contact{
+        font-size: 2rem;
+        font-family: @third-font;
+     }
+     .gitimg{
+         width: 6rem;
+         vertical-align: middle;
+         background-color:(rgba(0, 0, 0, 0.418));
+         border-radius:1rem;
+     }
     }
     .membersr{
         .text-box1();

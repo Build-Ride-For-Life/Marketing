@@ -649,7 +649,7 @@ footer {
   margin-right: auto;
   flex-wrap: wrap;
 }
-#aboutcontainer #members .teamlead img {
+#aboutcontainer #members .teamlead img:not(.gitimg) {
   width: 40%;
   min-width: 23rem;
   height: auto;
@@ -670,6 +670,16 @@ footer {
 #aboutcontainer #members .teamlead .descriptionlead .leadDev {
   font-size: 2.3rem;
   font-family: 'Anton', sans-serif;
+}
+#aboutcontainer #members .teamlead .descriptionlead .contact {
+  font-size: 1.5rem;
+  font-family: 'Anton', sans-serif;
+}
+#aboutcontainer #members .teamlead .descriptionlead .contact .gitimg {
+  width: 6rem;
+  vertical-align: middle;
+  background-color: rgba(0, 0, 0, 0.418);
+  border-radius: 1rem;
 }
 @media ( max-width: 500px ) {
   #aboutcontainer #members .teamlead {
@@ -721,6 +731,18 @@ footer {
     margin-top: 0;
     margin-bottom: 0;
   }
+}
+#aboutcontainer #members .memberlist .membersl .contact,
+#aboutcontainer #members .memberlist .membersr .contact {
+  font-size: 2rem;
+  font-family: 'Anton', sans-serif;
+}
+#aboutcontainer #members .memberlist .membersl .gitimg,
+#aboutcontainer #members .memberlist .membersr .gitimg {
+  width: 6rem;
+  vertical-align: middle;
+  background-color: rgba(0, 0, 0, 0.418);
+  border-radius: 1rem;
 }
 #aboutcontainer #members .memberlist .membersr {
   color: #b6c2aa;
