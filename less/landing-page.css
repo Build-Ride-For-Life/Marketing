@@ -215,7 +215,9 @@
   background-image: linear-gradient(#586e6b, #3d3f4c);
   border-radius: 20px;
   padding: 2rem 2rem 2rem 2rem;
-  width: 32rem;
+  max-width: 32rem;
+  min-width: 23rem;
+  margin-left: 3rem;
   padding-top: 2rem;
   padding: 3rem 3rem 3rem 3rem;
 }
@@ -301,6 +303,8 @@
   justify-content: center;
 }
 #container #welcome .signupbtndiv .signbtn {
+  text-decoration: none;
+  line-height: 4rem;
   display: block;
   transition: 0.32s;
   background-color: #6dc472;
@@ -313,7 +317,7 @@
   color: white;
   letter-spacing: 1px;
   font-family: 'Anton', sans-serif;
-  border: 2px solid black;
+  border: 2px solid #6dc472;
 }
 #container #welcome .signupbtndiv .signbtn:hover {
   color: darkolivegreen;

@@ -75,7 +75,7 @@
   margin-right: auto;
   flex-wrap: wrap;
 }
-#aboutcontainer #members .teamlead img {
+#aboutcontainer #members .teamlead img:not(.gitimg) {
   width: 40%;
   min-width: 23rem;
   height: auto;
@@ -96,6 +96,16 @@
 #aboutcontainer #members .teamlead .descriptionlead .leadDev {
   font-size: 2.3rem;
   font-family: 'Anton', sans-serif;
+}
+#aboutcontainer #members .teamlead .descriptionlead .contact {
+  font-size: 1.5rem;
+  font-family: 'Anton', sans-serif;
+}
+#aboutcontainer #members .teamlead .descriptionlead .contact .gitimg {
+  width: 6rem;
+  vertical-align: middle;
+  background-color: rgba(0, 0, 0, 0.418);
+  border-radius: 1rem;
 }
 @media ( max-width: 500px ) {
   #aboutcontainer #members .teamlead {
@@ -136,10 +146,7 @@
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-}
-#aboutcontainer #members .memberlist .membersl .descriptionl,
-#aboutcontainer #members .memberlist .membersr .descriptionl {
-  padding-left: 2rem;
+  max-width: 18rem;
 }
 @media ( max-width: 500px ) {
   #aboutcontainer #members .memberlist .membersl,
@@ -148,12 +155,29 @@
     margin-bottom: 0;
   }
 }
+#aboutcontainer #members .memberlist .membersl .contact,
+#aboutcontainer #members .memberlist .membersr .contact {
+  font-size: 1.7rem;
+  font-family: 'Anton', sans-serif;
+}
+#aboutcontainer #members .memberlist .membersl .gitimg,
+#aboutcontainer #members .memberlist .membersr .gitimg {
+  width: 6rem;
+  vertical-align: middle;
+  background-color: rgba(0, 0, 0, 0.418);
+  border-radius: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 #aboutcontainer #members .memberlist .membersr {
   color: #b6c2aa;
   background-image: linear-gradient(#586e6b, #3d3f4c);
   border-radius: 20px;
   padding: 2rem 2rem 2rem 2rem;
+  display: flex;
+  justify-content: flex-end;
   margin-bottom: 2rem;
+  padding-right: 4rem;
 }
 #aboutcontainer #members .memberlist .membersr .descriptionr {
   padding-right: 2rem;
@@ -170,7 +194,13 @@
   background-image: linear-gradient(#7c5a50, #332131);
   border-radius: 20px;
   padding: 2rem 2rem 2rem 2rem;
+  display: flex;
+  justify-content: flex-start;
   margin-bottom: 2rem;
+}
+#aboutcontainer #members .memberlist .membersl .descriptionl {
+  padding-left: 4rem;
+  text-align: left;
 }
 @media ( max-width: 500px ) {
   #aboutcontainer #members .memberlist .membersl {

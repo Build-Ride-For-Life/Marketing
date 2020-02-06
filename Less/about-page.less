@@ -24,7 +24,7 @@
          .center();
          .margincenter();
          flex-wrap: wrap;
-         img{
+         img:not(.gitimg){
             width: 40%;
             min-width: 23rem;
             height: auto;
@@ -47,6 +47,17 @@
                 font-size: 2.3rem;
                 font-family: @third-font;
              }
+             .contact{
+                font-size: 1.5rem;
+                font-family: @third-font;
+                .gitimg{
+                    width: 6rem;
+                    vertical-align: middle;
+                    background-color:(rgba(0, 0, 0, 0.418));
+                    border-radius:1rem;
+                 }
+             }
+             
              
          }
          @media @phone{
@@ -78,23 +89,40 @@
             border-radius: 50%;
             .center();
             .margincenter();
+            max-width: 18rem;
     
             }
-       .descriptionl{
-           padding-left: 2rem;
-       }
        @media @phone{
            margin-top:0;
            margin-bottom:0;
        }
+       .contact{
+
+        font-size: 1.7rem;
+        font-family: @third-font;
+        
+        
+     }
+     .gitimg{
+         width: 6rem;
+         vertical-align: middle;
+         background-color:(rgba(0, 0, 0, 0.418));
+         border-radius:1rem;
+         margin-top: 1rem;
+         margin-bottom: 1rem;
+     }
     }
     .membersr{
         .text-box1();
+        display: flex;
+        justify-content:flex-end;
         margin-bottom: 2rem;
+        padding-right: 4rem;
         .descriptionr{
             padding-right:2rem;
             text-align:right;
         }
+        
         @media @phone{
             margin-bottom:0;
             border-radius: initial;
@@ -102,7 +130,13 @@
     }
     .membersl{
         .text-box2();
+        display: flex;
+        justify-content:flex-start;
         margin-bottom: 2rem;
+        .descriptionl{
+            padding-left:4rem;
+            text-align:left;
+        }
         @media @phone{
             margin-bottom:0;
             border-radius: initial;
