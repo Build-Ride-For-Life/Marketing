@@ -301,6 +301,8 @@
   justify-content: center;
 }
 #container #welcome .signupbtndiv .signbtn {
+  text-decoration: none;
+  line-height: 4rem;
   display: block;
   transition: 0.32s;
   background-color: #6dc472;
@@ -313,7 +315,7 @@
   color: white;
   letter-spacing: 1px;
   font-family: 'Anton', sans-serif;
-  border: 2px solid black;
+  border: 2px solid #6dc472;
 }
 #container #welcome .signupbtndiv .signbtn:hover {
   color: darkolivegreen;

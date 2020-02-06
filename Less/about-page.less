@@ -89,11 +89,9 @@
             border-radius: 50%;
             .center();
             .margincenter();
+            max-width: 18rem;
     
             }
-       .descriptionl{
-           padding-left: 2rem;
-       }
        @media @phone{
            margin-top:0;
            margin-bottom:0;
@@ -111,11 +109,15 @@
     }
     .membersr{
         .text-box1();
+        display: flex;
+        justify-content:flex-end;
         margin-bottom: 2rem;
+        padding-right: 4rem;
         .descriptionr{
             padding-right:2rem;
             text-align:right;
         }
+        
         @media @phone{
             margin-bottom:0;
             border-radius: initial;
@@ -123,7 +125,13 @@
     }
     .membersl{
         .text-box2();
+        display: flex;
+        justify-content:flex-start;
         margin-bottom: 2rem;
+        .descriptionl{
+            padding-left:4rem;
+            text-align:left;
+        }
         @media @phone{
             margin-bottom:0;
             border-radius: initial;

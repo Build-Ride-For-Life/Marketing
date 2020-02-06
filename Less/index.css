@@ -599,6 +599,8 @@ footer {
   justify-content: center;
 }
 #container #welcome .signupbtndiv .signbtn {
+  text-decoration: none;
+  line-height: 4rem;
   display: block;
   transition: 0.32s;
   background-color: #6dc472;
@@ -720,10 +722,7 @@ footer {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-}
-#aboutcontainer #members .memberlist .membersl .descriptionl,
-#aboutcontainer #members .memberlist .membersr .descriptionl {
-  padding-left: 2rem;
+  max-width: 18rem;
 }
 @media ( max-width: 500px ) {
   #aboutcontainer #members .memberlist .membersl,
@@ -749,7 +748,10 @@ footer {
   background-image: linear-gradient(#586e6b, #3d3f4c);
   border-radius: 20px;
   padding: 2rem 2rem 2rem 2rem;
+  display: flex;
+  justify-content: flex-end;
   margin-bottom: 2rem;
+  padding-right: 4rem;
 }
 #aboutcontainer #members .memberlist .membersr .descriptionr {
   padding-right: 2rem;
@@ -766,7 +768,13 @@ footer {
   background-image: linear-gradient(#7c5a50, #332131);
   border-radius: 20px;
   padding: 2rem 2rem 2rem 2rem;
+  display: flex;
+  justify-content: flex-start;
   margin-bottom: 2rem;
+}
+#aboutcontainer #members .memberlist .membersl .descriptionl {
+  padding-left: 4rem;
+  text-align: left;
 }
 @media ( max-width: 500px ) {
   #aboutcontainer #members .memberlist .membersl {
