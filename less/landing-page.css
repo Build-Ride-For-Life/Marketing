@@ -1,0 +1,327 @@
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v14/1Ptug8zYS_SKggPNyC0ISg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'ZCOOL QingKe HuangYou';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('ZCOOL QingKe HuangYou Regular'), local('ZCOOLQingKeHuangYou-Regular'), url(https://fonts.gstatic.com/s/zcoolqingkehuangyou/v5/2Eb5L_R5IXJEWhD3AOhSvFC554MOOahI4mR4jPe4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Sigmar One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Sigmar One Regular'), local('SigmarOne-Regular'), url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6Tpow.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Anton Regular'), local('Anton-Regular'), url(https://fonts.gstatic.com/s/anton/v11/1Ptgg87LROyAm3Kz-Co.ttf) format('truetype');
+}
+.text-box1 {
+  color: #b6c2aa;
+  background-image: linear-gradient(#586e6b, #3d3f4c);
+  border-radius: 20px;
+  padding: 2rem 2rem 2rem 2rem;
+}
+.text-box2 {
+  color: #ccc3b2;
+  background-image: linear-gradient(#7c5a50, #332131);
+  border-radius: 20px;
+  padding: 2rem 2rem 2rem 2rem;
+}
+#container {
+  max-width: 90%;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100%;
+}
+@media ( max-width: 500px ) {
+  #container {
+    max-width: 100%;
+  }
+}
+#container .header .headerimg {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 30rem;
+}
+@media ( max-width: 500px ) {
+  #container .header {
+    display: none;
+  }
+}
+@media ( max-width: 800px ) {
+  #container .header {
+    display: none;
+  }
+}
+#container .landing {
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  max-width: 150rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media ( max-width: 500px ) {
+  #container .landing {
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+}
+@media ( max-width: 800px ) {
+  #container .landing {
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+}
+#container .landing .carouselreal {
+  margin: 0 auto;
+  margin-top: 2rem;
+  position: relative;
+  width: 70%;
+  height: 0;
+  padding-bottom: 40%;
+  user-select: none;
+  background-color: #4c4c4c;
+  border: solid 10px #2c2c2c;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+@media ( max-width: 500px ) {
+  #container .landing .carouselreal {
+    margin-top: 0;
+    border-radius: 0;
+  }
+}
+@media ( max-width: 800px ) {
+  #container .landing .carouselreal {
+    height: 40rem;
+  }
+}
+#container .landing .carouselreal .slide-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#container .landing .carouselreal .slide-img img {
+  width: inherit;
+  height: inherit;
+}
+#container .landing .carouselreal #nav_slide {
+  width: 100%;
+  height: 11px;
+  bottom: 12%;
+  position: absolute;
+  text-align: center;
+  z-index: 99;
+  cursor: default;
+}
+#container .landing .carouselreal #nav_slide .dots {
+  top: -5px;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin: 0 4px;
+  position: relative;
+  border-radius: 50%;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.6);
+}
+#container .landing .carouselreal #nav_slide .dots:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: 0.25s;
+}
+#container .landing .carouselreal #i1,
+#container .landing .carouselreal #i2,
+#container .landing .carouselreal #i3,
+#container .landing .carouselreal #i4,
+#container .landing .carouselreal #i5,
+#container .landing .carouselreal #i6 {
+  display: none;
+}
+#container .landing .carouselreal .pre,
+#container .landing .carouselreal .nxt {
+  width: 12%;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  background-color: rgba(88, 88, 88, 0.2);
+  z-index: 99;
+  transition: 0.45s;
+  cursor: pointer;
+  text-align: center;
+}
+#container .landing .carouselreal .pre:hover,
+#container .landing .carouselreal .nxt:hover {
+  transition: 0.3s;
+  background-color: rgba(88, 88, 89, 0.8);
+  color: #ffffff;
+}
+#container .landing .carouselreal .pre {
+  left: 0;
+}
+#container .landing .carouselreal .nxt {
+  right: 0;
+}
+#container .landing .carouselreal #i1:checked ~ #one,
+#container .landing .carouselreal #i2:checked ~ #two,
+#container .landing .carouselreal #i3:checked ~ #three,
+#container .landing .carouselreal #i4:checked ~ #four,
+#container .landing .carouselreal #i5:checked ~ #five,
+#container .landing .carouselreal #i6:checked ~ #six {
+  z-index: 9;
+  animation: scroll 1s ease-in-out;
+}
+#container .landing .carouselreal #i1:checked ~ #nav_slide #dot1,
+#container .landing .carouselreal #i2:checked ~ #nav_slide #dot2,
+#container .landing .carouselreal #i3:checked ~ #nav_slide #dot3,
+#container .landing .carouselreal #i4:checked ~ #nav_slide #dot4,
+#container .landing .carouselreal #i5:checked ~ #nav_slide #dot5,
+#container .landing .carouselreal #i6:checked ~ #nav_slide #dot6 {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+@keyframes scroll {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#container .landing .carouseldesc {
+  margin-top: 2rem;
+  color: #b6c2aa;
+  background-image: linear-gradient(#586e6b, #3d3f4c);
+  border-radius: 20px;
+  padding: 2rem 2rem 2rem 2rem;
+  max-width: 32rem;
+  min-width: 23rem;
+  margin-left: 3rem;
+  padding-top: 2rem;
+  padding: 3rem 3rem 3rem 3rem;
+}
+@media ( max-width: 500px ) {
+  #container .landing .carouseldesc {
+    width: 90%;
+    background-image: initial;
+    color: #332131;
+    display: none;
+  }
+}
+@media ( max-width: 800px ) {
+  #container .landing .carouseldesc {
+    width: 90%;
+    background-image: initial;
+    color: #332131;
+  }
+}
+#container .landing .carouseldesc .carouseltitle {
+  font-size: 2.3rem;
+  font-family: 'Anton', sans-serif;
+}
+@media ( max-width: 800px ) {
+  #container .landing .landing {
+    margin-top: 0;
+  }
+  #container .landing .carouselreal {
+    width: 100%;
+    height: 0;
+    padding-bottom: 55%;
+  }
+}
+@media ( max-width: 500px ) {
+  #container .landing .carouselreal {
+    border: none;
+    width: 100%;
+    height: 0;
+    padding-bottom: 55%;
+  }
+  #container .landing .pre,
+  #container .landing .nxt {
+    width: 15%;
+  }
+  #container .landing #nav_slide .dots {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+#container #welcome {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#container #welcome .mobiletext .hiddentext {
+  display: none;
+}
+@media ( max-width: 800px ) {
+  #container #welcome .mobiletext {
+    width: 80%;
+  }
+}
+@media ( max-width: 500px ) {
+  #container #welcome .mobiletext {
+    width: 90%;
+  }
+  #container #welcome .mobiletext .hiddentext {
+    display: initial;
+  }
+}
+#container #welcome .welcometext {
+  width: 100%;
+}
+#container #welcome .signupbtndiv {
+  margin-top: 3rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+#container #welcome .signupbtndiv .signbtn {
+  text-decoration: none;
+  line-height: 4rem;
+  display: block;
+  transition: 0.32s;
+  background-color: #6dc472;
+  margin: 0 10px 20px;
+  cursor: pointer;
+  width: 12rem;
+  height: 45px;
+  font-size: 2rem;
+  border-radius: 10px;
+  color: white;
+  letter-spacing: 1px;
+  font-family: 'Anton', sans-serif;
+  border: 2px solid #6dc472;
+}
+#container #welcome .signupbtndiv .signbtn:hover {
+  color: darkolivegreen;
+  background-image: linear-gradient(#c5f8cc, #c5f8cc);
+  background-color: #c5f8cc;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}

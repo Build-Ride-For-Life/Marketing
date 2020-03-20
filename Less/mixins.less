@@ -1,0 +1,64 @@
+// Mixins in here
+@import "variables";
+@import "mixins";
+//mixins
+.center(){ //we want the parethesis because we want this mixin to be consumed by the compiler
+	display:flex;
+	justify-content:center;
+  }
+ .margincenter(){
+	margin-left:auto;
+    margin-right:auto;
+ } 
+.supersize(){
+	font-size:30px;
+    font-weight: bold;
+}
+
+.text-box1{
+	color:@pallete6;
+	background-image: linear-gradient( @pallete3, @pallete1);
+	border-radius: 20px;
+	padding:2rem 2rem 2rem 2rem;
+}
+
+.text-box2{
+	color:@pallete13;
+	background-image: linear-gradient( @pallete9,@pallete11);
+	border-radius: 20px;
+	padding:2rem 2rem 2rem 2rem;
+}
+
+.custom-btn(@color:rgb(109, 196, 114),@width:12rem,@text-color:white){
+	display: block;
+	transition: 0.32s;
+	background-color:@color;
+	margin: 0 10px 20px;
+	cursor: pointer;
+	width: @width;
+	height: 45px;
+	font-size: 2rem;
+	border-radius: 10px;
+	color:@text-color;
+	letter-spacing: 1px;
+	font-family:@third-font;
+	border:2px solid rgb(109, 196, 114);
+	&:hover{
+		color:darkolivegreen;
+		background-image: linear-gradient( rgb(197, 248, 204),rgb(197, 248, 204));
+                background-color: rgb(197, 248, 204);
+  		box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	}
+  }
+
+  .keyframes(@name; @arguments) {
+	@-moz-keyframes @name { @arguments(); }
+	@-webkit-keyframes @name { @arguments(); }
+	@keyframes @name { @arguments(); }
+}
+
+.animation(@arguments) {
+	-webkit-animation: @arguments;
+	-moz-animation: @arguments;
+	animation: @arguments;
+}
